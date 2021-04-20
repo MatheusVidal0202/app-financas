@@ -12,6 +12,8 @@ target 'financas' do
 
   if !ENV['CI']
     use_flipper!({ 'Flipper' => '0.80.0' })
+    pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
     post_install do |installer|
       flipper_post_install(installer)
     end
